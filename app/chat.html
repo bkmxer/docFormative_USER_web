@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <!-- [TODO] Add the proper title if needed -->
+    <title>docFormative</title>
+
+    <!-- [TODO] Add the description -->
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="img/Logo.jpg">
+
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Template Basic Images End -->
+
+    <!-- Load Fonts CSS Start -->
+    <link rel="stylesheet" href="css/fonts.min.css">
+    <!-- Load Fonts CSS End -->
+
+    <!-- Load Bootstrap 4 Grid Start -->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <!-- Load CusBootstrap 4 Grid End -->
+
+    <!-- Load Custom CSS Start -->
+    <link rel="stylesheet" href="css/main.min.css">
+    <!-- Load Custom CSS End -->
+
+
+    <!-- Custom Browsers Color Start -->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content=" #2871C6">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content=" #2871C6">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content=" #2871C6">
+    <!-- Custom Browsers Color End -->
+
+</head>
+
+<body>
+    <!--[Structure] Header START -->
+    <header>
+        <!--[Structure] Navbar START -->
+        <nav class="navigation">
+            <ul class="navigation__links">
+                <li class="navigation__link-item">
+                    <a href="products.html" class="navigation__link">
+                        <img src="img/drugs.svg" alt="drugs icon">
+                        <span class="tooltip">
+                            Products
+                        </span>
+                    </a>
+                </li>
+                <li class="navigation__link-item">
+                    <a href="general-stats.html" class="navigation__link">
+                        <img src="img/stats.svg" alt="drugs icon">
+                        <span class="tooltip">
+                            General stats
+                        </span>
+                    </a>
+                </li>
+                <li class="navigation__link-item js-dropdown-wrapper">
+                    <a href="chat.html" class="navigation__link navigation__link--alert js-alert">
+                        <img src="img/chat.svg" alt="drugs icon">
+                        <span class="tooltip">
+                            Chats
+                        </span>
+                    </a>
+                    <!-- <ul class="alert-dropdown">
+                        <li class="alert-dropdown__item">
+                            <a href="#" class="alert-dropdown__link">
+                                <img src="img/notifications/3.png" alt="">
+                                <span>3 messages on Eucrisa</span>
+                            </a>
+                        </li>
+                        <li class="alert-dropdown__item">
+                            <a href="#" class="alert-dropdown__link">
+                                <img src="img/notifications/2.png" alt="">
+                                <span>32 messages on Xeljanz</span>
+                            </a>
+                        </li>
+                        <li class="alert-dropdown__item">
+                            <a href="#" class="alert-dropdown__link">
+                                <img src="img/notifications/1.png" alt="">
+                                <span>1 message on Altace</span>
+                            </a>
+                        </li>
+                        <li class="alert-dropdown__item alert-dropdown__item--last">
+                            <a href="#" class="alert-dropdown__link">
+                                <img src="img/notifications/notification.svg" class="hide-hover" alt="">
+                                <img src="img/notifications/notification-white.svg" class="hover" alt="">
+                                <span>See all notifications</span>
+                            </a>
+                        </li>
+                    </ul> -->
+                </li>
+                <li class="navigation__link-item navigation__link-item--bottom">
+                    <a href="#" class="navigation__link">
+                        <img src="img/profile.svg" alt="drugs icon">
+                    </a>
+                </li>
+                <li class="navigation__link-item">
+                    <a href="#" class="navigation__link">
+                        <img src="img/logout.svg" alt="drugs icon">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!--[Structure] Navbar END -->
+    </header>
+    <!--[Structure] Header END -->
+
+    <!--[Structure] Main START -->
+    <main class="main-content pt-0">
+        <div class="container-fluid height-100vh">
+            <div class="row justify-content-center height-100">
+                <div class="col-12 col-lg-3-custom-2 order-2 order-lg-1 pl-0 pr-0">
+                    <div class="chats height-100">
+                        <!-- Searach box START -->
+                        <div class="search-box">
+                            <input type="text" class="search-box__input" placeholder="Search" id="Search">
+                            <img src="img/search.svg" alt="search" class="input-icon">
+                        </div>
+                        <!-- Search Box END -->
+
+                        <!-- Chat group START -->
+                        <div class="chats__group">
+                            <p class="chats__title">
+                                <img src="img/Rectangle 2.2.png" alt="">
+                                <span>CHANTIX</span>
+                            </p>
+                            <ul class="chats__group-list">
+                                <li class="chats__group-item">
+                                    <a href="#" class="chats__group-link chats__group-link--active" data-chatid="1">
+                                        <img src="img/avatar-big-1.png" alt="">
+                                        <div class="chats__group-info">
+                                            <div class="chats__group-info-top">
+                                                <h4>Joseph P.</h4>
+                                                <span>2 sec ago</span>
+                                            </div>
+                                            <p>
+                                                Can you send me a pdf file Lorem ipsum dolor sit amet.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="chats__group-item">
+                                    <a href="#" class="chats__group-link"  data-chatid="2">
+                                        <img src="img/avatar-big-1.png" alt="">
+                                        <div class="chats__group-info">
+                                            <div class="chats__group-info-top">
+                                                <h4>Lorem 2</h4>
+                                                <span>20 sec ago</span>
+                                            </div>
+                                            <p>
+                                                Can you send me a pdf file Lorem ipsum dolor sit amet.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Chat group END -->
+
+                        <!-- Chat group START -->
+                        <div class="chats__group">
+                                <p class="chats__title">
+                                    <img src="img/Rectangle 2.2.png" alt="">
+                                    <span>TEST</span>
+                                </p>
+                                <ul class="chats__group-list">
+                                    <li class="chats__group-item">
+                                        <a href="#" class="chats__group-link"  data-chatid="3">
+                                            <img src="img/avatar-big-1.png" alt="">
+                                            <div class="chats__group-info">
+                                                <div class="chats__group-info-top">
+                                                    <h4>Joseph |||.</h4>
+                                                    <span>2 sec ago</span>
+                                                </div>
+                                                <p>
+                                                    Can you send me a pdf file Lorem ipsum dolor sit amet.
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Chat group END -->
+
+                        <!-- Chat group START -->
+                        <div class="chats__group">
+                                <p class="chats__title">
+                                    <img src="img/Rectangle 2.2.png" alt="">
+                                    <span>ALTACE</span>
+                                </p>
+                                <ul class="chats__group-list">
+                                    <li class="chats__group-item">
+                                        <a href="#" class="chats__group-link"  data-chatid="4">
+                                            <img src="img/avatar-big-1.png" alt="">
+                                            <div class="chats__group-info">
+                                                <div class="chats__group-info-top">
+                                                    <h4>Victor G.</h4>
+                                                    <span>2 sec ago</span>
+                                                </div>
+                                                <p>
+                                                    Thank you!
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                               <div class="chats__group-alert">
+                                   2
+                               </div> 
+                            </div>
+                            <!-- Chat group END -->                            
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6-custom-1 pl-0 pr-0 order-3 order-lg-2">
+                    <!-- Main Chat section START -->
+                    <section class="chat height-100" data-chatid="1">
+                        
+                        <!-- New Message START -->
+                        <form action="">
+                            <div class="message-input__wrapper">
+                                <input type="text" class="message-input__inputfield" placeholder="Type here">
+                                <div class="file_upload">
+                                    <button type="button" class="button--icon message-input__attach-icon">
+                                        <span class="visually-hidden">
+                                            Attach file
+                                        </span>
+                                    </button>
+                                    <div class="file_upload__label visually-hidden">File not selected</div>
+                                    <input type="file" id="upload-file" class="visually-hidden"/>
+                                </div>
+                                <button type="submit" class="button message-input__send-cta js-chat-send">
+                                    Send
+                                </button>
+                            </div>
+                        </form>
+                        <!-- New Message END -->
+                        
+                        <!-- Message START -->
+                        <div class="message message--right">
+                            <div class="message__img">
+                                <img src="img/avatar-1.png" alt="">
+                            </div>
+                            <p class="message__text">
+                                Can you send me a pdf file with more info so I can take a deeper look?
+                            </p>
+                        </div>
+                        <!-- Message END -->
+
+                        <!-- Message START -->
+                        <div class="message message--left">
+                            <div class="message__img">
+                                <img src="img/avatar-2.png" alt="">
+                            </div>
+                            <p class="message__text">
+                                Hello Joseph. </br>
+                                How can I help you?
+                            </p>
+                        </div>
+                        <!-- Message END -->
+
+                        <!-- Message START -->
+                        <div class="message message--right">
+                            <div class="message__img">
+                                <img src="img/avatar-1.png" alt="">
+                            </div>
+                            <p class="message__text">
+                                Can you send me a pdf file with more info so I can take a deeper look?
+                            </p>
+                        </div>
+                        <!-- Message END -->
+
+                        <!-- Message START -->
+                        <div class="message message--left">
+                            <div class="message__img">
+                                <img src="img/avatar-2.png" alt="">
+                            </div>
+                            <p class="message__text">
+                                Hello Joseph. </br>
+                                How can I help you?
+                            </p>
+                        </div>
+                        <!-- Message END -->
+
+                        <!-- Message START -->
+                        <div class="message message--right">
+                            <div class="message__img">
+                                <img src="img/avatar-1.png" alt="">
+                            </div>
+                            <p class="message__text">
+                                    Hi, I need some advice here
+                            </p>
+                        </div>
+                        <!-- Message END -->
+
+                    </section>
+                    <!-- Main Chat section END -->
+                    <!-- Main Chat section START -->
+                    <section class="chat height-100 hide" data-chatid="2">
+                        
+                        <!-- New Message START -->
+                        <form action="">
+                            <div class="message-input__wrapper">
+                                <input type="text" class="message-input__inputfield" placeholder="Type here">
+                                <div class="file_upload">
+                                    <button type="button" class="button--icon message-input__attach-icon">
+                                        <span class="visually-hidden">
+                                            Attach file
+                                        </span>
+                                    </button>
+                                    <div class="file_upload__label visually-hidden">File not selected</div>
+                                    <input type="file" id="upload-file" class="visually-hidden"/>
+                                </div>
+                                <button type="submit" class="button message-input__send-cta js-chat-send">
+                                    Send
+                                </button>
+                            </div>
+                        </form>
+                        <!-- New Message END -->
+
+                        <!-- Message START -->
+                        <div class="message message--right">
+                            <div class="message__img">
+                                <img src="img/avatar-1.png" alt="">
+                            </div>
+                            <p class="message__text">
+                                Can you send me a pdf file with more info so I can take a deeper look?
+                            </p>
+                        </div>
+                        <!-- Message END -->
+
+                        <!-- Message START -->
+                        <div class="message message--left">
+                            <div class="message__img">
+                                <img src="img/avatar-2.png" alt="">
+                            </div>
+                            <p class="message__text">
+                                Hello Joseph. </br>
+                                How can I help you?
+                            </p>
+                        </div>
+                        <!-- Message END -->
+
+                        <!-- Message START -->
+                        <div class="message message--right">
+                            <div class="message__img">
+                                <img src="img/avatar-1.png" alt="">
+                            </div>
+                            <p class="message__text">
+                                    Hi, I need some advice here
+                            </p>
+                        </div>
+                        <!-- Message END -->
+
+                    </section>
+                    <!-- Main Chat section END -->
+                    <!-- Main Chat section START -->
+                    <section class="chat height-100 hide" data-chatid="3">
+                        
+                            <!-- New Message START -->
+                            <form action="">
+                                <div class="message-input__wrapper">
+                                    <input type="text" class="message-input__inputfield" placeholder="Type here">
+                                    <div class="file_upload">
+                                        <button type="button" class="button--icon message-input__attach-icon">
+                                            <span class="visually-hidden">
+                                                Attach file
+                                            </span>
+                                        </button>
+                                        <div class="file_upload__label visually-hidden">File not selected</div>
+                                        <input type="file" id="upload-file" class="visually-hidden"/>
+                                    </div>
+                                    <button type="submit" class="button message-input__send-cta js-chat-send">
+                                        Send
+                                    </button>
+                                </div>
+                            </form>
+                            <!-- New Message END -->
+    
+                            <!-- Message START -->
+                            <div class="message message--right">
+                                <div class="message__img">
+                                    <img src="img/avatar-1.png" alt="">
+                                </div>
+                                <p class="message__text">
+                                    Can you send me a pdf file with more info so I can take a deeper look?
+                                </p>
+                            </div>
+                            <!-- Message END -->
+    
+                            <!-- Message START -->
+                            <div class="message message--left">
+                                <div class="message__img">
+                                    <img src="img/avatar-2.png" alt="">
+                                </div>
+                                <p class="message__text">
+                                    Hello Joseph. </br>
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, dicta.
+                                </p>
+                            </div>
+                            <!-- Message END -->
+    
+                            <!-- Message START -->
+                            <div class="message message--right">
+                                <div class="message__img">
+                                    <img src="img/avatar-1.png" alt="">
+                                </div>
+                                <p class="message__text">
+                                        Lorem ipsum dolor sit.
+                                </p>
+                            </div>
+                            <!-- Message END -->
+
+                            <!-- Message START -->
+                            <div class="message message--left">
+                                <div class="message__img">
+                                    <img src="img/avatar-2.png" alt="">
+                                </div>
+                                <p class="message__text">
+                                    Hello Joseph. </br>
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, dicta.
+                                </p>
+                            </div>
+                            <!-- Message END -->
+    
+                    </section>
+                    <!-- Main Chat section END -->                    
+                    <!-- Main Chat section START -->
+                    <section class="chat height-100 hide" data-chatid="4">
+                        <!-- New Message START -->
+                        <form action="">
+                            <div class="message-input__wrapper">
+                                <input type="text" class="message-input__inputfield" placeholder="Type here">
+                                <div class="file_upload">
+                                    <button type="button" class="button--icon message-input__attach-icon">
+                                        <span class="visually-hidden">
+                                            Attach file
+                                        </span>
+                                    </button>
+                                    <div class="file_upload__label visually-hidden">File not selected</div>
+                                    <input type="file" id="upload-file" class="visually-hidden"/>
+                                </div>
+                                <button type="submit" class="button message-input__send-cta js-chat-send">
+                                    Send
+                                </button>
+                            </div>
+                        </form>
+                        <!-- New Message END -->
+
+                        <!-- Message START -->
+                        <div class="message message--right">
+                            <div class="message__img">
+                                <img src="img/avatar-1.png" alt="">
+                            </div>
+                            <p class="message__text">
+                                Can you send me a pdf file with more info so I can take a deeper look?
+                            </p>
+                        </div>
+                        <!-- Message END -->
+
+                        <!-- Message START -->
+                        <div class="message message--left">
+                            <div class="message__img">
+                                <img src="img/avatar-2.png" alt="">
+                            </div>
+                            <p class="message__text">
+                                Hello Joseph. </br>
+                                How can I help you?
+                            </p>
+                        </div>
+                        <!-- Message END -->
+
+                        <!-- Message START -->
+                        <div class="message message--right">
+                            <div class="message__img">
+                                <img src="img/avatar-1.png" alt="">
+                            </div>
+                            <p class="message__text">
+                                    Hi, I need some advice here
+                            </p>
+                        </div>
+                        <!-- Message END -->
+
+                        <!-- Message START -->
+                        <div class="message message--right">
+                                <div class="message__img">
+                                    <img src="img/avatar-1.png" alt="">
+                                </div>
+                                <p class="message__text">
+                                        Hi, I need some advice here
+                                </p>
+                            </div>
+                            <!-- Message END -->
+                        <!-- Message START -->
+                        <div class="message message--right">
+                                <div class="message__img">
+                                    <img src="img/avatar-1.png" alt="">
+                                </div>
+                                <p class="message__text">
+                                        Hi, I need some advice here
+                                </p>
+                            </div>
+                            <!-- Message END -->
+                        <!-- Message START -->
+                        <div class="message message--right">
+                                <div class="message__img">
+                                    <img src="img/avatar-1.png" alt="">
+                                </div>
+                                <p class="message__text">
+                                        Hi, I need some advice here
+                                </p>
+                            </div>
+                            <!-- Message END -->                                                                                
+
+                    </section>
+                    <!-- Main Chat section END -->                    
+                </div>
+                <div class="col-12 col-lg-3-custom-1 pl-0 pr-0 order-1 order-lg-3">
+                        <section class="account height-100">
+                            <!-- <select name="select1" id="select1">
+                                <option value=""></option>
+                                <option value="1">Ibrance</option>
+                                <option value="2">Ibrance</option>
+                                <option value="3">Ibrance</option>
+                                <option value="4">Ibrance</option>
+                            </select> -->
+    
+                            <!-- <ul class="controls__list">
+                                <li class="controls__item">
+                                    <a href="#" class="controls__link">
+    
+                                    </a>
+                                </li>
+                                <li class="controls__item">
+                                    <a href="#" class="controls__link">
+                                        
+                                    </a>
+                                </li>
+                                <li class="controls__item">
+                                    <a href="#" class="controls__link">
+                                        
+                                    </a>
+                                </li>                                
+                            </ul> -->
+
+                            <div class="account__avatar">
+                                <img src="img/avatar-big-1.png" alt="avatar">
+                            </div>
+                            <h3 class="account__name">
+                                Joseph P.
+                            </h3>
+                            <p class="account__status">Active right now</p>
+
+                            <div class="account__info-group info-group">
+                                <p class="info-group__title">
+                                    PRIMARY ADDRESS
+                                </p>
+                                <p class="info-group__value">
+                                    691 Cherrydale DR, Lafayette Hill PA 194442326
+                                </p>
+                            </div>
+
+                            <div class="account__info-group info-group">
+                                <p class="info-group__title">
+                                    PHONE NUMBER
+                                </p>
+                                <p class="info-group__value">
+                                    267-305-8998
+                                </p>
+                            </div>
+
+                            <div class="account__info-group info-group">
+                                <p class="info-group__title">
+                                        PRIMARY TAXONOMY
+                                </p>
+                                <p class="info-group__value">
+                                        Internal Medicine Gastroenterology
+                                </p>
+                            </div>
+                        </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--[Structure] Main END -->
+
+    <!--[Structure] Footer START -->
+    <footer class="footer">
+
+    </footer>
+    <!--[Structure] Footer END -->
+
+
+    <!-- Optimized loading JS Start -->
+
+    <script>
+        var scr={scripts:[{src:"js/libs.min.js",async:!1},{src:"js/common.js",async:!1}]};!function(t,n,c){"use strict";var r=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var c=0;c<t.length;c++){var r=n.createElement("script"),s=t[c];r.src=s.src,r.async=s.async,n.body.appendChild(r)}return!0};t.addEventListener?t.addEventListener("load",function(){r(c.scripts)},!1):t.attachEvent?t.attachEvent("onload",function(){r(c.scripts)}):t.onload=function(){r(c.scripts)}}(window,document,scr);
+    </script>
+
+
+    <!-- Optimized loading JS End -->
+
+</body>
+
+</html>

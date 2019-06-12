@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <!-- [TODO] Add the proper title if needed -->
+    <title>docFormative</title>
+
+    <!-- [TODO] Add the description -->
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="img/Logo.jpg">
+
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Template Basic Images End -->
+
+    <!-- Load Fonts CSS Start -->
+    <link rel="stylesheet" href="css/fonts.min.css">
+    <!-- Load Fonts CSS End -->
+
+    <!-- Load Bootstrap 4 Grid Start -->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <!-- Load CusBootstrap 4 Grid End -->
+
+    <!-- Load jquery UI Start -->
+    <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.theme.css">
+    <!-- Load jquery UI End -->
+
+    <!-- Load Custom CSS Start -->
+    <link rel="stylesheet" href="css/main.min.css">
+    <!-- Load Custom CSS End -->
+
+
+    <!-- Custom Browsers Color Start -->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content=" #2871C6">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content=" #2871C6">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content=" #2871C6">
+    <!-- Custom Browsers Color End -->
+
+</head>
+
+<body>
+    <!--[Structure] Header START -->
+    <header>
+        <!--[Structure] Navbar START -->
+        <nav class="navigation">
+            <ul class="navigation__links">
+                <li class="navigation__link-item">
+                    <a href="products.html" class="navigation__link">
+                        <img src="img/drugs.svg" alt="drugs icon">
+                        <span class="tooltip">
+                            Products
+                        </span>
+                    </a>
+                </li>
+                <li class="navigation__link-item">
+                    <a href="general-stats.html" class="navigation__link">
+                        <img src="img/stats.svg" alt="drugs icon">
+                        <span class="tooltip">
+                            General stats
+                        </span>
+                    </a>
+                </li>
+                <li class="navigation__link-item js-dropdown-wrapper">
+                    <a href="chat.html" class="navigation__link navigation__link--alert js-alert">
+                        <img src="img/chat.svg" alt="drugs icon">
+                        <span class="tooltip">
+                            Chats
+                        </span>
+                    </a>
+                    <!-- <ul class="alert-dropdown">
+                        <li class="alert-dropdown__item">
+                            <a href="#" class="alert-dropdown__link">
+                                <img src="img/notifications/3.png" alt="">
+                                <span>3 messages on Eucrisa</span>
+                            </a>
+                        </li>
+                        <li class="alert-dropdown__item">
+                            <a href="#" class="alert-dropdown__link">
+                                <img src="img/notifications/2.png" alt="">
+                                <span>32 messages on Xeljanz</span>
+                            </a>
+                        </li>
+                        <li class="alert-dropdown__item">
+                            <a href="#" class="alert-dropdown__link">
+                                <img src="img/notifications/1.png" alt="">
+                                <span>1 message on Altace</span>
+                            </a>
+                        </li>
+                        <li class="alert-dropdown__item alert-dropdown__item--last">
+                            <a href="#" class="alert-dropdown__link">
+                                <img src="img/notifications/notification.svg" class="hide-hover" alt="">
+                                <img src="img/notifications/notification-white.svg" class="hover" alt="">
+                                <span>See all notifications</span>
+                            </a>
+                        </li>
+                    </ul> -->
+                </li>
+                <li class="navigation__link-item navigation__link-item--bottom">
+                    <a href="#" class="navigation__link">
+                        <img src="img/profile.svg" alt="drugs icon">
+                    </a>
+                </li>
+                <li class="navigation__link-item">
+                    <a href="#" class="navigation__link">
+                        <img src="img/logout.svg" alt="drugs icon">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!--[Structure] Navbar END -->
+    </header>
+    <!--[Structure] Header END -->
+
+    <!--[Structure] Main START -->
+    <main class="main-content pt-0">
+        <div class="container-fluid height-100vh">
+            <div class="row justify-content-center height-100 max-100vh max-100vh--desktop">
+                    <div class="col-12 col-lg-3-custom-4 pl-0 pr-0 order-1 order-lg-1">
+                            <div class="controls">
+                                <!-- search selector START -->
+                                <div class="controls__selector">
+                                    <select name="list" id="list">
+                                        <option value="" disabled>Select</option>
+                                        <option value="1" data-image="img/Rectangle 2.2.png">Ibrance</option>
+                                        <option value="2" data-image="img/Rectangle 2.1.png">Eucrisa</option>
+                                        <option value="3" data-image="img/Rectangle 2.4.png">Xeljanz</option>
+                                        <option value="4" data-image="img/Rectangle 2.5.png">Altace</option>
+                                        <option value="5" data-image="img/Rectangle 2.3.png">Chantix</option>
+                                        <option value="6" data-image="img/pfi.png" selected>Pfizer</option>
+                                    </select>
+                                </div>
+                                <!-- search selector END -->
+        
+                                <!-- Controls list START -->
+                                <ul class="controls__list">
+                                    <li class="controls__list-item">
+                                        <a href="edit-product.html" class="controls__link active">
+                                            <img src="img/edit-white.svg" class="hover" alt="edit">
+                                            <img src="img/edit.svg" class="hide-hover" alt="edit">
+                                            <span>Edit product</span>
+                                        </a>
+                                    </li>
+                                    <li class="controls__list-item">
+                                        <a href="altace-stats.html" class="controls__link">
+                                            <img src="img/stats.svg" class="hover" alt="edit">
+                                            <img src="img/stats-grey.svg" class="hide-hover" alt="edit">
+                                            <span><span>Altace</span> stats</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- Controls list END -->
+        
+                                <!-- Bottom LOGO START -->
+                                <div class="controls__bottom-logo">
+                                    <img src="img/logo_white.svg" alt="">
+                                </div>
+                                <!-- Bottom LOGO END -->
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-lg-6-custom-3 pl-0 pr-0 order-3 order-lg-2">
+                                <section class="edit height-100vh max-100vh--desktop">
+                                    <!-- Info block START -->
+                                    <div class="edit__info-block info-block">
+                                        <div class="info-block__controls">
+                                            <button type="button" class="button__icon button__icon--edit js-button-edit" data-open="edit-text-block-dialog">
+                                                <span class="visually-hidden">
+                                                    edit
+                                                </span>
+                                            </button>
+                                            <button type="button" class="button__icon button__icon--remove js-remove" data-open="delete-icons-dialog">
+                                                <span class="visually-hidden">
+                                                    remove
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="info-block__data">
+                                            <div class="info-block__main-img">
+                                                <img src="img/Pfizer.png" alt="">
+                                            </div>
+                                        </div>                                
+                                    </div>
+                                    <!-- Info block END -->
+
+                                    <!-- Info block START -->
+                                    <div class="edit__info-block info-block">
+                                        <div class="info-block__controls">
+                                            <button type="button" class="button__icon button__icon--edit js-button-edit" data-open="edit-text-block-dialog">
+                                                <span class="visually-hidden">
+                                                    edit
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="info-block__data">
+                                            <div class="info-block__title">
+                                                <h3>Pfizer</h3>
+                                            </div>
+                                        </div>                                  
+                                    </div>
+                                    <!-- Info block END -->
+
+                                    <!-- Info block START -->
+                                    <div class="edit__info-block info-block">
+                                        <div class="info-block__controls">
+                                            <button type="button" class="button__icon button__icon--edit js-button-edit" data-open="edit-text-block-dialog">
+                                                <span class="visually-hidden">
+                                                    edit
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="info-block__data">
+                                            <div class="info-block__subtitle">
+                                                <p>Varenicline</p>
+                                            </div>
+                                        </div>                                  
+                                    </div>
+                                    <!-- Info block END --> 
+
+                                    <!-- Info block START -->
+                                    <p class="edit__info-block edit__title mt-4">Short description*</p>
+                                    <div class="edit__info-block info-block">
+                                        <div class="info-block__controls">
+                                            <button type="button" class="button__icon button__icon--edit js-button-edit" data-open="edit-text-block-dialog">
+                                                <span class="visually-hidden">
+                                                    edit
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="info-block__data">
+                                            <div class="info-block__description" id="description-count">
+                                                <p>Lorem ipsum dolo amet, an veri solum delectus vel, alii ridens adipisci vel no, sit et tota scripserit theophrastus. Et pri primis epicuri deseruisse, suas nonumes ex est. Paulo scaevola ut eam, ex eum assum complectitur. Vim cu zril deseruisse adversarium.</p>
+                                            </div>
+                                            <p class="info-block__counter"><span id="description-counter">273</span>/320</p>
+                                        </div>                                  
+                                    </div>
+                                    <!-- Info block END -->    
+
+                                    <!-- Info block START -->
+                                    <div class="edit__info-block info-block">
+                                        <div class="info-block__controls">
+                                            <button type="button" class="button__icon button__icon--edit js-button-edit" data-open="edit-text-block-dialog">
+                                                <span class="visually-hidden">
+                                                    edit
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="info-block__restrictions mt-4">
+                                            <ul class="restrictions__list">
+                                                <li class="restrictions__icon restrictions__icon--blue restrictions__icon--separated js-remove-restriction" data-open="delete-icons-dialog">
+                                                    <img src="img/pills-blue.svg" alt="pills">
+                                                </li>
+                                                <li class="restrictions__icon restrictions__icon--red mr-2 js-remove-restriction" data-open="delete-icons-dialog">
+                                                    <img src="img/restrictions/alco.svg" alt="pills">
+                                                </li>
+                                                <li class="restrictions__icon restrictions__icon--red ml-1 mr-2 js-remove-restriction" data-open="delete-icons-dialog">
+                                                    <img src="img/restrictions/pregrant.svg" alt="pregrant">
+                                                </li>
+                                                <li class="restrictions__icon restrictions__icon--yellow ml-1 mr-2 js-remove-restriction" data-open="delete-icons-dialog">
+                                                    <img src="img/restrictions/car.svg" alt="driving">
+                                                </li>                                                    
+                                                <li class="restrictions__icon restrictions__icon--add ml-1">
+                                                    <button type="button" class="add-restriction" data-open="edit-icons-dialog">
+                                                            <span class="visually-hidden">
+                                                                add
+                                                            </span>
+                                                    </button>
+                                                </li>                    
+                                            </ul>
+                                        </div>                                  
+                                    </div>
+                                    <!-- Info block END -->  
+                                    
+                                   <!-- Info block START -->
+                                    <p class="edit__info-block edit__title mt-4">Dosing*</p>
+                                    <div class="edit__info-block info-block">
+                                        <div class="info-block__controls">
+                                            <button type="button" class="button__icon button__icon--edit js-button-edit" data-open="edit-text-block-dialog">
+                                                <span class="visually-hidden">
+                                                    edit
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="info-block__data">
+                                            <div class="info-block__description" id="description-count">
+                                                <p>
+                                                    100 mcg/5 mcg </br>
+                                                    200 mcg/5 mcg
+                                                </p>
+                                            </div>
+                                        </div>                                  
+                                    </div>
+                                    <!-- Info block END --> 
+                                    <div class="info-block__title-label--blue mt-4">
+                                        Custom info
+                                    </div>
+                                     <!-- Info block START -->
+                                    <p class="edit__info-block edit__title mt-4">
+                                        Custom video
+                                    </p>
+                                    <div class="edit__info-block info-block">
+                                        <div class="info-block__controls">
+                                            <button type="button" class="button__icon button__icon--edit js-button-edit" data-open="edit-text-block-dialog">
+                                                <span class="visually-hidden">
+                                                    edit
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="info-block__data">
+                                            <div class="info-block__description info-block__video" id="description-count">
+                                                    <video width="400" controls>
+                                                        <source src="mov_bbb.mp4" type="video/mp4">
+                                                        Your browser does not support HTML5 video.
+                                                    </video>
+                                            </div>
+                                        </div>                                  
+                                    </div>
+                                    <!-- Info block END --> 
+                                    <!-- Info block START -->
+                                    <p class="edit__info-block edit__title edit__title--uppercase mt-4">
+                                            IMPORTANT SAFETY INFORMATION AND INDICATION
+                                    </p>
+                                    <div class="edit__info-block info-block">
+                                        <div class="info-block__controls">
+                                            <button type="button" class="button__icon button__icon--edit js-button-edit" data-open="edit-text-block-dialog">
+                                                <span class="visually-hidden">
+                                                    edit
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="info-block__data">
+                                            <div class="info-block__description info-block__info" id="description-count">
+                                                <p>
+                                                    Et pri primis epicuri deseruisse, suas nonumes ex est. Paulo scaevola ut eam, ex eum assum complectitur. Vim cu zril deseruisse adversarium.
+                                                </p>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, an veri solum delectus vel, alii ridens adipisci vel no, sit et tota scripserit theophrastus.
+                                                </p>
+                                                <p>
+                                                    Et pri primis epicuri deseruisse, suas nonumes ex est. Paulo scaevola ut eam, ex eum assum complectitur. Vim cu zril deseruisse adversarium.
+                                                </p>
+                                                <p>Lorem ipsum dolor sit amet, an veri solum delectus vel, alii ridens adipisci vel no, sit et tota scripserit theophrastus.
+
+                                                </p>
+                                            </div>
+                                        </div>                                  
+                                    </div>
+                                    <!-- Info block END --> 
+                                </section>
+                        </div>
+        
+                        <div class="col-12 col-lg-3-custom-6 pl-0 pr-0 order-2 order-lg-3">
+                            <section class="edit-2 height-100">
+                                <p class="edit-2__warning">
+                                    * Cover image, Name, Drug, short description and quick info (icons) are all mandatory.
+                                </p>
+                                <h4 class="edit-2__title">Add more content</h4>
+                                <p class="edit-2__subtitle">It will appear below the “MORE INFO” section of the description page</p>
+                                <button type="button" class="edit-2__button" data-open="edit-text-block-dialog">
+                                        Add text block
+                                </button>
+                                <button type="button" class="edit-2__button" data-open="edit-image-dialog">
+                                        Add image
+                                </button>
+                                <button type="button" class="edit-2__button" data-open="edit-video-dialog">
+                                        Add video
+                                </button>
+                                <button type="button" class="edit-2__button" data-open="edit-pdf-dialog">
+                                        Add pdf
+                                </button>                                                                                                
+                            </section>
+                        </div>
+            </div>
+        </div>
+    </main>
+    <!--[Structure] Main END -->
+
+    <!--[Structure] Footer START -->
+    <footer class="footer">
+            <!-- Modal 1 START -->
+            <div id="edit-text-block-dialog" class="dialog" title="Basic dialog">
+                <div class="dialog__field">
+                    <div class="dialog__label">Title</div>
+                    <input type="text" class="dialog__input" value="IMPORTANT SAFETY INFORMATION AND INDICATION">
+                </div>
+                <div class="dialog__field">
+                    <div class="dialog__label">Body</div>
+                    <textarea name="" class="dialog__input" cols="30" rows="10">Et pri primis epicuri deseruisse, suas nonumes ex est. Paulo scaevola ut eam, ex eum assum complectitur. Vim cu zril deseruisse adversarium.Lorem ipsum dolor sit amet, an veri solum delectus vel, alii ridens adipisci vel no, sit et tota scripserit theophrastus. Et pri primis epicuri deseruisse, suas nonumes ex est. Paulo scaevola ut eam, ex eum assum complectitur. Vim cu zril deseruisse adversarium.
+                    </textarea>
+                </div>
+                <div class="dialog__field dialog__buttons">
+                        <button type="button" class="button button__icon button__icon--remove js-cancel-dialog  mr-2">
+                                <span class="visually-hidden">
+                                    remove
+                                </span>
+                        </button>
+                        <button type="button" class="button ml-1 mr-1 button--with-text js-cancel-dialog">
+                                Cancel
+                        </button>
+                        <button type="button" class="button ml-1 button--with-text button--blue js-cancel-dialog">
+                                Save
+                        </button>                                                
+                </div>
+            </div>
+            <!-- Modal 1 END -->
+
+            <!-- Modal 2 START -->
+            <div id="edit-pdf-dialog" class="dialog" title="Basic dialog">
+                    <div class="dialog__field">
+                        <div class="dialog__label">Title</div>
+                        <div class="controls__selector dialog__selector">
+                                <select name="list" id="list2">
+                                    <option value="" selected disabled>Select</option>
+                                    <option value="1" data-image="img/info.png">information</option>
+                                    <option value="2" data-image="img/info.png">information</option>
+                                    <option value="3" data-image="img/info.png">information</option>
+                                    <option value="4" data-image="img/info.png">information</option>
+                                    <option value="5" data-image="img/info.png">information</option>
+                                    <option value="6" data-image="img/info.png">information</option>
+                                    <option value="7" data-image="img/info.png">information</option>
+                                </select>
+                            </div>
+                    </div>
+                    <div class="dialog__field">
+                        <div class="dialog__label">Select icon</div>
+                        <input type="text" class="dialog__input" value="Important information">
+                    </div>
+                    <div class="dialog__field">
+                        <div class="dialog__label">Description</div>
+                        <textarea name="" class="dialog__input" cols="30" rows="10">If you miss a dose, take it as soon as you remember. If it is close to the time for your next dose, skip the missed dose. Just take your next dose at your regular time.
+                        </textarea>
+                    </div>
+                    <div class="dialog__field dialog__buttons">
+                            <button type="button" class="button button__icon button__icon--remove js-cancel-dialog  mr-2">
+                                    <span class="visually-hidden">
+                                        remove
+                                    </span>
+                            </button>
+                            <button type="button" class="button ml-1 mr-1 button--with-text js-cancel-dialog">
+                                    Cancel
+                            </button>
+                            <button type="button" class="button ml-1 button--with-text button--blue js-cancel-dialog">
+                                    Save
+                            </button>                                                
+                    </div>
+                </div>
+            <!-- Modal 2 END -->
+
+            <!-- Modal 3 START -->
+            <div id="edit-video-dialog" class="dialog" title="Basic dialog">
+                    <div class="dialog__field">
+                        <div class="dialog__label">Video URL</div>
+                        <input type="text" class="dialog__input js-video-url" placeholder="Link">
+                    </div>
+
+                    <div class="dialog__field">
+                        <div class="dialog__label">Preview</div>
+                        <div class="js-video-placeholder">
+                            <div class="video-placeholder"></div>
+                        </div>
+                    </div>
+
+                    <div class="dialog__field dialog__buttons">
+                            <button type="button" class="button button__icon button__icon--remove js-cancel-dialog  mr-2">
+                                    <span class="visually-hidden">
+                                        remove
+                                    </span>
+                            </button>
+                            <button type="button" class="button ml-1 mr-1 button--with-text js-cancel-dialog">
+                                    Cancel
+                            </button>
+                            <button type="button" class="button ml-1 button--with-text button--blue js-cancel-dialog">
+                                    Save
+                            </button>                                                
+                    </div>
+                </div>
+            <!-- Modal 3 END --> 
+            <!-- Modal 4 START -->
+            <div id="edit-image-dialog" class="dialog" title="Basic dialog">
+                    <div class="dialog__field">
+                        <div class="dialog__label">Image</div>
+                    </div>
+                    <div class="dialog__field">
+                        <div class="dialog__label">Select icon</div>
+                        <input type="text" class="dialog__input" value="Important information">
+                    </div>
+
+                    <div class="dialog__field dialog__buttons">
+                            <button type="button" class="button button__icon button__icon--remove js-cancel-dialog  mr-2">
+                                    <span class="visually-hidden">
+                                        remove
+                                    </span>
+                            </button>
+                            <button type="button" class="button ml-1 mr-1 button--with-text js-cancel-dialog">
+                                    Cancel
+                            </button>
+                            <button type="button" class="button ml-1 button--with-text button--blue js-cancel-dialog">
+                                    Save
+                            </button>                                                
+                    </div>
+                </div>
+            <!-- Modal 4 END -->       
+            <!-- Modal 5 START -->
+                <div id="edit-icons-dialog" class="dialog" title="Basic dialog">
+                    <div class="dialog__field">
+                        <div class="dialog__label mb-2">Select restriction</div>
+                        <ul class="restrictions__list restrictions__list--select">
+                            <li class="restrictions__icon restrictions__icon--red ml-1 mr-2  js-cancel-dialog js-add-rest">
+                                <img src="img/restrictions/alco.svg" alt="pills">
+                            </li>
+                            <li class="restrictions__icon restrictions__icon--red ml-1 mr-2  js-cancel-dialog js-add-rest">
+                                <img src="img/restrictions/pregrant.svg" alt="pregrant">
+                            </li>
+                            <li class="restrictions__icon restrictions__icon--yellow ml-1 mr-2  js-cancel-dialog js-add-rest">
+                                <img src="img/restrictions/car.svg" alt="driving">
+                            </li>  
+                            <li class="restrictions__icon restrictions__icon--red ml-1 mr-2  js-cancel-dialog js-add-rest">
+                                <img src="img/restrictions/alco.svg" alt="pills">
+                            </li>
+                            <li class="restrictions__icon restrictions__icon--red ml-1 mr-2  js-cancel-dialog js-add-rest">
+                                <img src="img/restrictions/pregrant.svg" alt="pregrant">
+                            </li>
+                            <li class="restrictions__icon restrictions__icon--yellow ml-1 mr-2  js-cancel-dialog js-add-rest">
+                                <img src="img/restrictions/car.svg" alt="driving">
+                            </li>    
+                                    
+                        </ul>
+                    </div>
+
+                    <div class="dialog__field dialog__buttons">
+                            <button type="button" class="button button__icon button__icon--remove js-cancel-dialog  mr-2">
+                                    <span class="visually-hidden">
+                                        remove
+                                    </span>
+                            </button>
+                            <button type="button" class="button ml-1 mr-1 button--with-text js-cancel-dialog">
+                                    Cancel
+                            </button>
+                            <button type="button" class="button ml-1 button--with-text button--blue js-cancel-dialog">
+                                    Save
+                            </button>                                                
+                    </div>
+                </div>
+            <!-- Modal 5 END --> 
+
+            <!-- Modal 6 START -->
+            <div id="delete-icons-dialog" class="dialog" title="Basic dialog">
+                <div class="dialog__field">
+                    <div class="dialog__label mb-2">
+                        Are you sure to delete this item?
+                    </div>
+                </div>
+
+                <div class="dialog__field dialog__buttons">
+                    <button type="button" class="button button__icon button__icon--remove js-cancel-dialog  mr-2 aligned-center">
+                            <span class="visually-hidden">
+                                remove
+                            </span>
+                    </button>                                          
+                </div>
+            </div>
+        <!-- Modal 6 END -->            
+    </footer>
+    <!--[Structure] Footer END -->
+
+
+    <!-- Optimized loading JS Start -->
+    <script>
+        var scr={scripts:[{src:"js/libs.min.js",async:!1},{src:"js/common.js",async:!1}]};!function(t,n,c){"use strict";var r=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var c=0;c<t.length;c++){var r=n.createElement("script"),s=t[c];r.src=s.src,r.async=s.async,n.body.appendChild(r)}return!0};t.addEventListener?t.addEventListener("load",function(){r(c.scripts)},!1):t.attachEvent?t.attachEvent("onload",function(){r(c.scripts)}):t.onload=function(){r(c.scripts)}}(window,document,scr);
+    </script>
+    <!-- Optimized loading JS End -->
+
+</body>
+
+</html>

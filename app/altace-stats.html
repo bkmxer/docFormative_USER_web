@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <!-- [TODO] Add the proper title if needed -->
+    <title>docFormative</title>
+
+    <!-- [TODO] Add the description -->
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="img/Logo.jpg">
+
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Template Basic Images End -->
+
+    <!-- Load Fonts CSS Start -->
+    <link rel="stylesheet" href="css/fonts.min.css">
+    <!-- Load Fonts CSS End -->
+
+    <!-- Load Bootstrap 4 Grid Start -->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <!-- Load CusBootstrap 4 Grid End -->
+
+    <!-- Load Custom CSS Start -->
+    <link rel="stylesheet" href="css/main.min.css">
+    <!-- Load Custom CSS End -->
+
+
+    <!-- Custom Browsers Color Start -->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content=" #2871C6">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content=" #2871C6">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content=" #2871C6">
+    <!-- Custom Browsers Color End -->
+
+</head>
+
+<body>
+    <!--[Structure] Header START -->
+    <header>
+        <!--[Structure] Navbar START -->
+        <nav class="navigation">
+            <ul class="navigation__links">
+                <li class="navigation__link-item">
+                    <a href="products.html" class="navigation__link">
+                        <img src="img/drugs.svg" alt="drugs icon">
+                        <span class="tooltip">
+                            Products
+                        </span>
+                    </a>
+                </li>
+                <li class="navigation__link-item">
+                    <a href="general-stats.html" class="navigation__link">
+                        <img src="img/stats.svg" alt="drugs icon">
+                        <span class="tooltip">
+                            General stats
+                        </span>
+                    </a>
+                </li>
+                <li class="navigation__link-item js-dropdown-wrapper">
+                    <a href="chat.html" class="navigation__link navigation__link--alert js-alert">
+                        <img src="img/chat.svg" alt="drugs icon">
+                        <span class="tooltip">
+                            Chats
+                        </span>
+                    </a>
+                    <!-- <ul class="alert-dropdown">
+                        <li class="alert-dropdown__item">
+                            <a href="#" class="alert-dropdown__link">
+                                <img src="img/notifications/3.png" alt="">
+                                <span>3 messages on Eucrisa</span>
+                            </a>
+                        </li>
+                        <li class="alert-dropdown__item">
+                            <a href="#" class="alert-dropdown__link">
+                                <img src="img/notifications/2.png" alt="">
+                                <span>32 messages on Xeljanz</span>
+                            </a>
+                        </li>
+                        <li class="alert-dropdown__item">
+                            <a href="#" class="alert-dropdown__link">
+                                <img src="img/notifications/1.png" alt="">
+                                <span>1 message on Altace</span>
+                            </a>
+                        </li>
+                        <li class="alert-dropdown__item alert-dropdown__item--last">
+                            <a href="#" class="alert-dropdown__link">
+                                <img src="img/notifications/notification.svg" class="hide-hover" alt="">
+                                <img src="img/notifications/notification-white.svg" class="hover" alt="">
+                                <span>See all notifications</span>
+                            </a>
+                        </li>
+                    </ul> -->
+                </li>
+                <li class="navigation__link-item navigation__link-item--bottom">
+                    <a href="#" class="navigation__link">
+                        <img src="img/profile.svg" alt="drugs icon">
+                    </a>
+                </li>
+                <li class="navigation__link-item">
+                    <a href="#" class="navigation__link">
+                        <img src="img/logout.svg" alt="drugs icon">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!--[Structure] Navbar END -->
+    </header>
+    <!--[Structure] Header END -->
+
+    <!--[Structure] Main START -->
+    <main class="main-content pt-0">
+        <div class="container-fluid height-100vh">
+            <div class="row justify-content-center height-100">
+                <div class="col-12 col-lg-3-custom-4 pl-0 pr-0">
+                    <div class="controls">
+                        <!-- search selector START -->
+                        <div class="controls__selector">
+                            <select name="list" id="list">
+                                <option value="" disabled>Select</option>
+                                <option value="1" data-image="img/Rectangle 2.2.png">Ibrance</option>
+                                <option value="2" data-image="img/Rectangle 2.1.png">Eucrisa</option>
+                                <option value="3" data-image="img/Rectangle 2.4.png">Xeljanz</option>
+                                <option value="4" data-image="img/Rectangle 2.5.png" selected>Altace</option>
+                                <option value="5" data-image="img/Rectangle 2.3.png">Chantix</option>
+                            </select>
+                        </div>
+                        <!-- search selector END -->
+
+                        <!-- Controls list START -->
+                        <ul class="controls__list">
+                            <li class="controls__list-item">
+                                <a href="edit-product.html" class="controls__link">
+                                    <img src="img/edit-white.svg" class="hover" alt="edit">
+                                    <img src="img/edit.svg" class="hide-hover" alt="edit">
+                                    <span>Edit product</span>
+                                </a>
+                            </li>
+                            <li class="controls__list-item">
+                                <a href="altace-stats.html" class="controls__link active">
+                                    <img src="img/stats.svg" class="hover" alt="edit">
+                                    <img src="img/stats-grey.svg" class="hide-hover" alt="edit">
+                                    <span><span>Altace</span> stats</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- Controls list END -->
+
+                        <!-- Bottom LOGO START -->
+                        <div class="controls__bottom-logo">
+                            <img src="img/logo_white.svg" alt="">
+                        </div>
+                        <!-- Bottom LOGO END -->
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9-custom-1 pl-0 pr-0">
+                    <!-- Main Chat section START -->
+                    <section class="stats-specific height-100">
+                        <div class="container-fluid container-fluid--custom1">
+                            <div class="row justify-content-center">
+                                <div class="col-12 pl-0 pr-0">
+                                    <h3 class="heading heading--cards mt-0">
+                                        Altace stats
+                                    </h3>
+                                </div>
+                                <div class="col-12 pl-0 pr-0">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-3-custom-5 order-1 order-lg-1 pl-0">
+                                           <!-- Stats box START -->
+                                            <div class="tile tile--bg-white tile--rounded stats-box">
+                                                <h4 class="stats-box__title">
+                                                    Views
+                                                </h4>
+                                                <p class="stats-box__value">
+                                                    121
+                                                </p>
+                                                <p class="stats-box__subtitle">
+                                                    Total views this week
+                                                </p>
+                                            </div>
+                                            <!-- Stats box END -->
+                                            <!-- Stats box START -->
+                                            <div class="tile tile--bg-white tile--rounded stats-box">
+                                                <h4 class="stats-box__title">
+                                                    Time
+                                                </h4>
+                                                <p class="stats-box__value">
+                                                    1:44
+                                                </p>
+                                                <p class="stats-box__subtitle">
+                                                    Total hours spent
+                                                </p>
+                                            </div>
+                                            <!-- Stats box END -->       
+                                            </div>
+                                            <div class="col-12 col-lg-9-custom-2 order-1 order-lg-1 pl-0">
+                                                        <div class="tile tile--bg-white tile--rounded stats-box">
+                                                            <h4 class="stats-box__title">
+                                                                    Most time spent
+                                                            </h4>
+                                                            <div class="legend">
+                                                                <span class="current">Current week</span>
+                                                                <span class="last">Last week</span>
+                                                            </div>
+                                                            <div class="stats-box__chart" id="chartContainer"></div>
+                                                        </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Main Chat section END -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--[Structure] Main END -->
+
+    <!--[Structure] Footer START -->
+    <footer class="footer">
+
+    </footer>
+    <!--[Structure] Footer END -->
+
+
+    <!-- Optimized loading JS Start -->
+
+    <script>
+        var scr={scripts:[{src:"js/libs.min.js",async:!1},{src:"js/common.js",async:!1}]};!function(t,n,c){"use strict";var r=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var c=0;c<t.length;c++){var r=n.createElement("script"),s=t[c];r.src=s.src,r.async=s.async,n.body.appendChild(r)}return!0};t.addEventListener?t.addEventListener("load",function(){r(c.scripts)},!1):t.attachEvent?t.attachEvent("onload",function(){r(c.scripts)}):t.onload=function(){r(c.scripts)}}(window,document,scr);
+    </script>
+
+
+    <!-- Optimized loading JS End -->
+
+</body>
+
+</html>
