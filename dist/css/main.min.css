@@ -36,7 +36,8 @@ body {
   -webkit-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out; }
 
-img {
+img,
+video {
   max-width: 100%; }
 
 .height-100vh {
@@ -444,12 +445,32 @@ input,
     background-color: #2393D2;
     color: #fff; }
     .button--blue:hover {
-      background-color: #1c74a6; }
+      background-color: #1c74a6;
+      color: #fff; }
     .button--blue[disabled] {
       color: #fff;
       background-color: #94A8B2;
       border-color: #94A8B2;
       cursor: not-allowed; }
+  .button--samples {
+    width: 160px;
+    position: absolute;
+    top: 220px;
+    right: 150px; }
+    @media (max-width: 768px) {
+      .button--samples {
+        right: auto;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%); } }
+  .button--search {
+    background: #fff;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    width: 15px;
+    height: 15px; }
 
 @media (max-width: 768px) {
   .navigation {
@@ -702,7 +723,11 @@ input,
     position: absolute;
     top: 20px;
     right: 15px;
-    padding: 0; }
+    padding: 0;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border: none; }
     @media (max-width: 768px) {
       .search-section__mobile-trigger {
         display: block; } }
@@ -792,10 +817,8 @@ input,
 .news__banner {
   margin-left: -40px;
   margin-top: -25px;
-  width: -webkit-calc(100% + 15px);
-  width: calc(100% + 15px);
-  max-width: -webkit-calc(100% + 15px);
-  max-width: calc(100% + 15px);
+  width: 100%;
+  max-width: 100%;
   min-height: 280px;
   object-fit: cover; }
   @media (max-width: 768px) {
@@ -821,6 +844,12 @@ input,
   letter-spacing: 0.5px;
   position: relative; }
 
+.news__under-title {
+  color: #94A8B2;
+  font-size: 16px;
+  margin-bottom: 14px;
+  margin-top: -20px; }
+
 .news__text {
   color: #132732;
   font-size: 17px;
@@ -842,6 +871,15 @@ input,
           -ms-flex: 1;
               flex: 1; } }
 
+.popup__header {
+  font-size: 22px;
+  color: #1B2530;
+  font-weight: normal;
+  margin-bottom: 16px; }
+
+.company__body {
+  margin-top: 10px; }
+
 .like {
   position: absolute;
   right: 0;
@@ -851,6 +889,9 @@ input,
   -webkit-box-shadow: none;
           box-shadow: none;
   cursor: pointer; }
+  @media (max-width: 992px) {
+    .like {
+      right: 10px; } }
   .like svg {
     display: block; }
   .like svg.faved {
@@ -859,6 +900,276 @@ input,
     display: none; }
   .like--active svg.faved {
     display: block; }
+
+.mentioned-drugs__title {
+  font-size: 16px;
+  margin-top: 30px;
+  color: #94A8B2;
+  margin-bottom: 10px; }
+
+.mentioned-drugs__request {
+  color: #60AF46; }
+
+.mentioned-drugs .section__content {
+  margin-left: 0;
+  margin-right: 0; }
+  .mentioned-drugs .section__content .tile--small {
+    margin-right: 20px;
+    max-width: -webkit-calc((100% - 40px) / 3);
+    max-width: calc((100% - 40px) / 3);
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
+    .mentioned-drugs .section__content .tile--small:nth-child(3n + 3) {
+      margin-right: 0; }
+
+.drugs__precations {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.drugs__precation {
+  margin-left: 11px;
+  margin-right: 11px; }
+  .drugs__precation:first-of-type {
+    margin-left: 0; }
+  .drugs__precation:last-of-type {
+    margin-right: 0; }
+  .drugs__precation.drugs__precation--separator {
+    display: block;
+    background-color: #1B2530;
+    width: 2px;
+    height: 32px;
+    margin: 0; }
+
+.drugs__title {
+  color: #5D7481;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0; }
+
+.drugs .drugs__title.drugs__dosing-title {
+  margin-top: 35px;
+  margin-bottom: 4px; }
+
+.drugs__buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+  .drugs__buttons .button {
+    margin-right: 20px;
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center; }
+    .drugs__buttons .button:last-child {
+      margin-right: 0; }
+
+.drugs-dialog-section {
+  border-left: 1px solid #94A8B2;
+  padding-top: 0; }
+  .drugs-dialog-section__content {
+    padding: 21px 16px; }
+  .drugs-dialog-section__title-1 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #5D7481; }
+
+.dialog {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .dialog__list {
+    width: -webkit-calc(324% / 799 * 100);
+    width: calc(324% / 799 * 100);
+    border-right: 1px solid #94A8B2;
+    min-height: 100vh; }
+  .dialog .search-box {
+    padding: 25px 10px 10px;
+    position: relative;
+    border-bottom: 1px solid #94A8B2; }
+    .dialog .search-box input {
+      margin-bottom: 0;
+      padding-left: 20px; }
+    .dialog .search-box .button--search {
+      position: absolute;
+      top: 27px;
+      left: 10px;
+      padding: 0; }
+  .dialog__active {
+    max-height: 100vh;
+    overflow-y: hidden;
+    position: relative;
+    width: -webkit-calc(475% / 799 * 100);
+    width: calc(475% / 799 * 100); }
+  .dialog__main {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    height: -webkit-calc(100vh - 70px);
+    height: calc(100vh - 70px); }
+
+.message {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 35px;
+  margin-left: 16px;
+  margin-right: 16px;
+  max-width: 70%;
+  font-size: 16px;
+  line-height: 22px; }
+  .message--right {
+    margin-left: auto;
+    text-align: right;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    color: #5D7481; }
+    .message--right .message__text {
+      margin-right: 8px; }
+  .message--left {
+    margin-right: auto;
+    text-align: left;
+    color: #94A8B2; }
+    .message--left .message__text {
+      margin-left: 8px; }
+  .message__img {
+    min-width: 32px;
+    height: 32px; }
+    .message__img img {
+      width: 100%; }
+  .message__text {
+    margin-top: 0;
+    margin-bottom: 0; }
+
+.chats__group-link {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+  border-bottom: 1px solid #94A8B2;
+  padding: 11px 17px;
+  color: #94A8B2; }
+  .chats__group-link:hover, .chats__group-link:active, .chats__group-link:visited {
+    color: #94A8B2; }
+  .chats__group-link img {
+    margin-right: 11px; }
+  .chats__group-link h4 {
+    color: #94A8B2;
+    margin-bottom: 0; }
+  .chats__group-link--active:after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 70px;
+    left: auto;
+    top: 0;
+    right: 0;
+    background-color: #2393D2;
+    position: absolute;
+    z-index: 5; }
+  .chats__group-link--active h4 {
+    color: #1B2530; }
+
+.chats__group-info-top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.send-message-form {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 52px;
+  border-top: 1px solid #94A8B2;
+  padding: 10px 21px; }
+
+.message-input__inputfield {
+  margin-bottom: 0; }
+
+.message-input__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap; }
+
+.message-input__attach-icon {
+  background-color: #fff;
+  width: 32px;
+  height: 32px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border: 1px solid #94A8B2;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 20px; }
+
+.message-input__send-cta {
+  width: 90px;
+  margin-left: 14px; }
 
 .profile-page .main-content {
   width: -webkit-calc(100vw - (208% / 1280 * 100));

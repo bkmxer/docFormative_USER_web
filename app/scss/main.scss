@@ -36,7 +36,8 @@ body {
     transition: opacity 0.3s ease-out;
 }
 
-img {
+img,
+video {
     max-width: 100%;
 }
 
@@ -485,6 +486,7 @@ input,
 
         &:hover {
             background-color: darken($light-blue, 10%);
+            color: $white;
         }
 
         &[disabled] {
@@ -493,6 +495,27 @@ input,
             border-color: $light-grey;
             cursor: not-allowed;
         }
+    }
+
+    &--samples {
+        width: 160px;
+        position: absolute;
+        top: 220px;
+        right: 150px;
+
+        @include mq('small') {
+            right: auto;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &--search {
+        background: $white;
+        border: none;
+        box-shadow: none;
+        width: 15px;
+        height: 15px;
     }
 }
 // Button styles END
@@ -781,6 +804,9 @@ $lineSize: 0.15em;
         top: 20px;
         right: 15px;
         padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
 
         @include mq('small') {
             display: block;
@@ -939,6 +965,13 @@ $lineSize: 0.15em;
         position: relative;
     }
 
+    &__under-title {
+        color: $light-grey;
+        font-size: 16px;
+        margin-bottom: 14px;
+        margin-top: -20px;
+    }
+
     &__text {
         color: $dark2;
         font-size: 17px;
@@ -958,6 +991,16 @@ $lineSize: 0.15em;
     }
 }
 
+
+.popup {
+    &__header {
+        font-size: 22px;
+        color: $dark;
+        font-weight: normal;
+        margin-bottom: 16px;
+    }
+}
+
 .company {
     &__body {
         margin-top: 10px;
@@ -972,6 +1015,10 @@ $lineSize: 0.15em;
     background-color: transparent;
     box-shadow: none;
     cursor: pointer;
+
+    @include mq('medium') {
+        right: 10px;
+    }
 
     svg {
         display: block;
@@ -992,6 +1039,309 @@ $lineSize: 0.15em;
     }
 }
 // News section END
+
+// -----------------------------
+
+
+// Drugs section END
+
+.mentioned-drugs {
+    &__title {
+        font-size: 16px;
+        margin-top: 30px;
+        color: $light-grey;
+        margin-bottom: 10px;
+    }
+
+    &__request {
+        color: $green;
+    }
+
+    .section__content {
+        margin-left: 0;
+        margin-right: 0;
+
+        .tile--small {
+            margin-right: 20px;
+            max-width: calc((100% - 40px) / 3);
+            flex: 1;
+
+            &:nth-child(3n + 3) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.drugs {
+    &__precations {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__precation {
+        margin-left: 11px;
+        margin-right: 11px;
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        &.drugs__precation--separator {
+            display: block;
+            background-color: $dark;
+            width: 2px;
+            height: 32px;
+            margin: 0;
+        }
+    }
+
+    &__title {
+        color: $dark3;
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+
+    .drugs__title.drugs__dosing-title {
+        margin-top: 35px;
+        margin-bottom: 4px;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: flex-start;
+        
+        .button {
+            margin-right: 20px;
+            width: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: center;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.drugs-dialog-section {
+    border-left: 1px solid $light-grey;
+    padding-top: 0;
+
+    > img {
+        width: 100%;
+    }
+
+    &__content {
+        padding: 21px 16px;
+    }
+
+    &__title-1 {
+        font-size: 22px;
+        font-weight: bold;
+        color: $dark3;
+    }
+}
+
+// Drugs section END
+
+// -----------------------------
+
+// Dialog section START
+
+.dialog {
+    display: flex;
+
+    &__list {
+        width: calc(324% / 799 * 100);
+        border-right: 1px solid $light-grey;
+        min-height: 100vh;
+    }
+
+    .search-box {
+        padding: 25px 10px 10px;
+        position: relative;
+        border-bottom: 1px solid $light-grey;
+
+        input {
+            margin-bottom: 0;
+            padding-left: 20px;
+        }
+
+        .button--search {
+            position: absolute;
+            top: 27px;
+            left: 10px;
+            padding: 0;
+        }
+    }
+
+    &__active {
+        max-height: 100vh;
+        overflow-y: hidden;
+        position: relative;
+        width: calc(475% / 799 * 100);
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column-reverse;
+        height: calc(100vh - 70px);
+    }
+}
+
+
+.message {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-top: 35px;
+    margin-left: 16px;
+    margin-right: 16px;
+    max-width: 70%;
+    font-size: 16px;
+    line-height: 22px;
+
+    &--right {
+        margin-left: auto;
+        text-align: right;
+        flex-direction: row-reverse;
+        color: $dark3;
+
+        .message__text {
+            margin-right: 8px;
+        }
+    }
+
+    &--left {
+        margin-right: auto;
+        text-align: left;
+        color: $light-grey;
+
+        .message__text {
+            margin-left: 8px;
+        }
+    }
+
+    &__img {
+        min-width: 32px;
+        height: 32px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.chats {
+    &__group-item {
+    }
+
+    &__group-link {
+        position: relative;
+        display: flex;
+        height: 70px;
+        border-bottom: 1px solid $light-grey;
+        padding: 11px 17px;
+        color: $light-grey;
+
+        &:hover,
+        &:active,
+        &:visited {
+            color: $light-grey;
+        }
+
+        img {
+            margin-right: 11px;
+        }
+
+        h4 {
+            color: $light-grey;
+            margin-bottom: 0;
+        }
+
+        &--active {
+            &:after {
+                content: '';
+                display: block;
+                width: 10px;
+                height: 70px;
+                left: auto;
+                top:0;
+                right: 0;
+                background-color: $light-blue;
+                position: absolute;
+                z-index: 5;
+            }
+
+            h4 {
+                color: $dark;
+            }
+        }
+    }
+
+    &__group-info-top {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.send-message-form {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 52px;
+    border-top: 1px solid $light-grey;
+    padding: 10px 21px;
+}
+
+.message-input {
+
+    &__inputfield {
+        margin-bottom: 0;
+    } 
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    &__attach-icon {
+        background-color: $white;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 1px solid $light-grey;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+    }
+    
+    &__send-cta {
+        width: 90px;
+        margin-left: 14px;
+    }
+}
+
+// Dialog section END
 
 // -----------------------------
 
