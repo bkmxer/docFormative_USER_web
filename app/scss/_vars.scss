@@ -6,31 +6,29 @@
     font-style: $style;
 }
 
+@mixin svgColor($color) {
+    svg path {
+        fill: $color;
+        stroke: $color;
+    }
+}
+
 $default-font: "Rubik", sans-serif;
 $default-font-weight: normal;
 $default-font-style: normal;
 $default_font_color: #000;
 
 $white: #fff;
-$blue: #2871C6;
-$primary: #2194D2;
-$light-primary: #A7D7F1;
-$dark-primary: #1A76A7;
-$blue-gradient: linear-gradient(0deg, #1A76A7, #1A76A7);
-$blue2: #338DF5;
-$light-blue: #BCD5F2;
-$light-blue2: #f2f9fd;
-$light-blue3: #63A5F0;
+$black: #000;
 $dark: #1B2530;
-$grey1: #94A7B2;
-$grey2: #5D7481;
-$grey3: #C2C5CA;
-$almost-black: #132732;
-$light-grey: #5D6F81;
-$light-grey2: #94A2B2;
-$light-grey3: #F5F7FA;
-$light-grey4: #EAEBEC;
+$dark2: #132732;
 $red: #F54A33;
-$yellow: #F5CA33;
+$green: #60AF46;
+$light-grey: #94A8B2;
+$light-grey2: #F5F8FA;
+$light-blue: #2393D2;
+$light-blue2: #A7D7F1;
+$dark-blue: #1A76A7;
 
 $transparent-white: rgba(255,255,255,0.1);
+

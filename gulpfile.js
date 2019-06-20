@@ -65,13 +65,7 @@ gulp.task('sass', function(){
 gulp.task('libs', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/libs/jquery-ui/jquery-ui.js',
-		'app/libs/select2/js/select2.js',
-		'app/libs/Flot/jquery.flot.js',
-		'app/libs/Flot/jquery.flot.time.js',
-		'app/libs/Flot/jquery.flot.stack.js',
-		'app/libs/Flot/jquery.flot.resize.js',
-		'app/libs/flot-spline/js/jquery.flot.spline.min.js'
+		'app/libs/Semantic-UI/semantic.min.js'
 		])
 		.pipe(concat('libs.min.js'))
 		// .pipe(uglify())
