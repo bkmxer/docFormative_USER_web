@@ -75,16 +75,20 @@
         <div class="tile tile--login">
             <img src="./img/logo.svg" alt="main logo" class="tile__logo">
             <form action="#" class="login-form" id="login-form">
+                <input type="text" name="TYPE" value="GET_TK" class="hide">
                 <label class="input__wrapper">
-                    <input type="text" name="username" placeholder="Username" class="input" required>
+                    <input type="text" name="username" placeholder="Username" minlength="4" class="input" required>
                     <span class="input__info fade fade-out">Username</span>
                     <span class="input__error fade fade-out">This email is not registered</span>
                 </label>
                 <label class="input__wrapper">
-                    <input type="password" name="password" placeholder="Password" class="input" required>
+                    <input type="password" name="password" placeholder="Password" minlength="4" class="input" required>
                     <span class="input__info fade fade-out">Password</span>
                     <span class="input__error fade fade-out">The password is not correct</span>
                 </label>
+                <p class="form-error">
+
+                </p>
                 <input type="submit" value="Sign in" class="button button--blue login-form__primary-cta">
                 <p class="text-note d-inline-block d-md-none">New user? Sign up now!</p>
                 <a href="signup.html" class="button">
@@ -92,6 +96,12 @@
                     <span class="d-inline-block d-md-none">Sign up</span> 
                 </a>
             </form>
+
+            <div class="tile__overlay hide">
+                <div id='c'>
+                    <div class='s'></div>
+                </div>
+            </div>
         </div>
     </main>
     <!--[Structure] Main END -->

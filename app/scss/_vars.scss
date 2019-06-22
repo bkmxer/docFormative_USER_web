@@ -9,6 +9,11 @@
 @mixin svgColor($color) {
     svg path {
         fill: $color;
+    }
+}
+
+@mixin svgColorStroke($color) {
+    svg path {
         stroke: $color;
     }
 }

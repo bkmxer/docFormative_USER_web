@@ -199,8 +199,10 @@ h4,
 
 // -----------------------------
 
+
 //Basic tile styles START
 .tile {
+    position: relative;
     background-color: $white;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
@@ -211,7 +213,7 @@ h4,
 
     &--login {
         padding: 65px 60px 30px;
-
+        overflow: hidden;
         width: 480px;
         min-height: 480px;
         max-width: 100vw;
@@ -404,6 +406,16 @@ h4,
             margin-top: 0;
         }
     }
+
+    &__overlay {
+        background-color: rgba(100,100,100,0.5);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
 }
 
 //Basic tile styles END
@@ -416,10 +428,19 @@ form {
     width: 100%;
 }
 
+.form-error {
+    text-transform: uppercase;
+    color: $red;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 0;
+}
+
 //Input styles START
 input,
 .input {
     width: 100%;
+    border-radius: 0;
     margin-bottom: 24px;
     border: none;
     border-bottom: 1px solid $light-grey;
@@ -517,6 +538,28 @@ input,
         width: 15px;
         height: 15px;
     }
+
+    &--dialogs {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        box-shadow: none;
+        border: none;
+        background-color: transparent;
+        display: none;
+
+        @include mq('medium') {
+            display: block;
+        }
+
+        svg {
+            width: 30px;
+            max-width: 30px;
+            height: 30px;
+            max-height: 30px;
+            margin-right: 0;
+        }
+    }
 }
 // Button styles END
 
@@ -587,6 +630,10 @@ input,
             .navigation__link {
                 color: $dark;
                 @include svgColor($dark);
+
+                &.navigation__link--stroke {
+                    @include svgColorStroke($dark);
+                }
             }
         }
 
@@ -596,6 +643,10 @@ input,
             .navigation__link {
                 color: $dark-blue;
                 @include svgColor($dark-blue);
+
+                &.navigation__link--stroke {
+                    @include svgColorStroke($dark);
+                }
             }
 
             @include mq('small') {
@@ -1151,6 +1202,10 @@ $lineSize: 0.15em;
         font-weight: bold;
         color: $dark3;
     }
+
+    @include mq('large') {
+        display: none;
+    }
 }
 
 // Drugs section END
@@ -1166,6 +1221,39 @@ $lineSize: 0.15em;
         width: calc(324% / 799 * 100);
         border-right: 1px solid $light-grey;
         min-height: 100vh;
+        z-index: 2;
+        background-color: $white;
+
+        @include mq('medium') {
+            width: 0;
+            position: fixed;
+            left: 208px;
+            top: 0;
+            bottom: 0; 
+            overflow-x: hidden;
+            transition: width 0.2s linear;
+            z-index: 2;
+        }
+
+        @include mq('small') {
+            left: 58px;
+        }
+
+        &.dialog__list--active {
+            @include mq('medium') {
+                width: 450px;
+                max-width: calc(100vw - 208px);
+                box-shadow: 0 10px 10px -5px;
+                background-color: $white;
+                z-index: 2;
+            }
+
+            @include mq('small') {
+                width: calc(100vw - 128px);
+                max-width: calc(100vw - 128px);
+            }
+
+        }
     }
 
     .search-box {
@@ -1191,12 +1279,59 @@ $lineSize: 0.15em;
         overflow-y: hidden;
         position: relative;
         width: calc(475% / 799 * 100);
+
+        @include mq('medium') {
+            width: calc(100vw - 208px);
+            height: 100vh;
+        }
+
+        @include mq('small') {
+            width: calc(100vw - 58px);
+            height: 100vh;
+        }
     }
 
     &__main {
         display: flex;
         flex-direction: column-reverse;
         height: calc(100vh - 70px);
+        overflow-y: auto;
+
+        @include mq('large') {
+            height: calc(100vh - 70px - 167px);
+        }
+
+        @include mq('medium') {
+            display: block;
+        }
+    }
+
+    &__top {
+        display: none;
+        position: relative;
+
+        @include mq('large') {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid $light-grey;
+
+            img {
+                width: 150px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .drugs-dialog-section__title-1 {
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            .news__under-title {
+                margin-bottom: 0;
+            }
+        }
     }
 }
 
@@ -1266,8 +1401,16 @@ $lineSize: 0.15em;
             color: $light-grey;
         }
 
+        @include mq('xsmall') {
+            padding: 11px 5px;
+        }
+
         img {
             margin-right: 11px;
+
+            @include mq('xsmall') {
+                margin-right: 5px;
+            }
         }
 
         h4 {
@@ -1298,6 +1441,12 @@ $lineSize: 0.15em;
     &__group-info-top {
         display: flex;
         justify-content: space-between;
+
+        @include mq('xsmall') {
+            span {
+                display: none;
+            }
+        }
     }
 }
 
@@ -1338,6 +1487,10 @@ $lineSize: 0.15em;
     &__send-cta {
         width: 90px;
         margin-left: 14px;
+
+        @include mq('small') {
+            height: 32px;
+        }
     }
 }
 
@@ -1568,6 +1721,67 @@ $lineSize: 0.15em;
 // -----------------------------
 
 
+// Loading animation START
+#c {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  
+  .s {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    float: left;
+    background: #5dcce7;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-animation: r5 1s 0s ease-out infinite;
+    -moz-animation: r5 1s 0s ease-out infinite;
+    animation: r5 1s 0s ease-out infinite;
+  }
+  
+  @-webkit-keyframes r5 {
+    0% {
+        box-shadow: 0 0 8px 6px rgba(93,204,231, .5), 0 0 0px 0px transparent, 0 0 0px 0px rgba(93,204,231, .7);
+    }
+    10% {
+        transform:scale(1,1);
+        box-shadow: 0 0 8px 6px rgba(93,204,231, .5), 0 0 12px 10px transparent, 0 0 12px 14px rgba(93,204,231, .7);
+    }
+    100% {
+        box-shadow: 0 0 8px 6px rgba(26, 140, 255, 0), 0 0 0px 40px transparent, 0 0 0px 40px rgba(26, 140, 255, 0);
+    }
+  }
+
+  @-moz-keyframes r5 {
+    0% {
+        box-shadow: 0 0 8px 6px rgb(93,204,231), 0 0 0px 0px transparent, 0 0 0px 0px rgb(93,204,231);
+    }
+    10% {
+        box-shadow: 0 0 8px 6px rgb(93,204,231), 0 0 12px 10px transparent, 0 0 12px 14px rgb(93,204,231);
+    }
+    100% {
+        box-shadow: 0 0 8px 6px rgba(26, 140, 255, 0), 0 0 0px 40px transparent, 0 0 0px 40px rgba(26, 140, 255, 0);
+    }
+  }
+  @keyframes r5 {
+    0% {
+        box-shadow: 0 0 8px 6px rgb(93,204,231), 0 0 0px 0px transparent, 0 0 0px 0px rgb(93,204,231);
+    }
+    10% {
+        box-shadow: 0 0 8px 6px rgb(93,204,231), 0 0 12px 10px transparent, 0 0 12px 14px rgb(93,204,231);
+    }
+    100% {
+        box-shadow: 0 0 8px 6px rgba(26, 140, 255, 0), 0 0 0px 40px transparent, 0 0 0px 40px rgba(26, 140, 255, 0);
+    }
+}
+
+// Loading animation START
+
+// -----------------------------
+
 .section {
     &__title {
         color: $green;
@@ -1627,6 +1841,26 @@ $lineSize: 0.15em;
         @include mq('small') {
             left: 58px;
             width: calc(100vw - 116px);
+        }
+
+        &.home-page--dialog {
+            @include mq('large') {
+                width: calc(100vw - 208px);
+            }
+        }
+    }
+}
+
+.dialog-page {
+    .main-content--dialog {
+        @include mq('large') {
+            width: calc(100vw - 208px);
+        }
+
+        @include mq('small') {
+            width: calc(100vw - 58px);
+            padding-top: 0;
+            padding-bottom: 0;
         }
     }
 }
