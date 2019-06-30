@@ -329,7 +329,9 @@ h4,
       -webkit-border-top-right-radius: 12px;
               border-top-right-radius: 12px;
       -webkit-border-top-left-radius: 12px;
-              border-top-left-radius: 12px; }
+              border-top-left-radius: 12px;
+      height: -webkit-calc(100% - 48px);
+      height: calc(100% - 48px); }
     .tile--news .tile__description {
       line-height: 48px;
       padding-left: 16px;
