@@ -63,7 +63,7 @@
 
 </head>
 
-<body class="home-page">
+<body class="home-page" id="company">
     <!--[Structure] Header START -->
     <header>
         <aside class="navigation__sidebar">
@@ -177,7 +177,7 @@
         <article class="news">
             <img src="./img/pfi.jpg" alt="article banner" class="news__banner">
             <div class="news__body company__body">
-                <h2 class="news__title">
+                <h2 class="news__title line-1">
                         Pfizer for professionals
                 </h2>
                 <button type="button" class="like like--active js-like">
@@ -407,7 +407,27 @@
         var scr={scripts:[{src:"js/libs.min.js",async:!1},{src:"js/common.js",async:!1}]};!function(t,n,c){"use strict";var r=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var c=0;c<t.length;c++){var r=n.createElement("script"),s=t[c];r.src=s.src,r.async=s.async,n.body.appendChild(r)}return!0};t.addEventListener?t.addEventListener("load",function(){r(c.scripts)},!1):t.attachEvent?t.attachEvent("onload",function(){r(c.scripts)}):t.onload=function(){r(c.scripts)}}(window,document,scr);
     </script>
 
-
+    <script>
+        // Render the data from the localStorage during the initial load
+        var companyID = localStorage.getItem('activeCompany');
+        
+        if (companyID) {
+            var companiesObject = JSON.parse(localStorage.getItem('companiesObject')).filter(obj => {return obj._id === companyID})[0];
+            //find the sections to populate
+            var pic = document.querySelector('#company .news__banner');
+            var title = document.querySelector('#company .news__title');
+            var text = document.querySelector('#company .news__text');
+            var like = document.querySelector('#company .js-like');
+            
+            console.log(companiesObject);
+            //populate the sections with actual data
+            if (companiesObject.pic) {pic.src = companiesObject.pic;}
+            if (companiesObject.name) {title.innerHTML = companiesObject.name;}
+            if (companiesObject.long_desc) {text.innerHTML = companiesObject.long_desc;} else {text.innerHTML = '';}
+            if (companiesObject.is_favorite && companiesObject.is_favorite == 'YES') {like.classList.add("like--active");} else {like.classList.remove("like--active");}
+        }
+        console.log('data rendered');
+    </script>
     <!-- Optimized loading JS End -->
 
 </body>

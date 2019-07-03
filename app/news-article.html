@@ -177,7 +177,7 @@
         <article class="news">
             <img src="./img/bayer.jpg" alt="article banner" class="news__banner">
             <div class="news__body">
-                <h2 class="news__title">
+                <h2 class="news__title line-1">
                         Bayer statement on Jury’s
                 </h2>
                 <button type="button" class="like like--active js-like">
@@ -197,13 +197,13 @@
                         </h2>
         
                         <div class="section__content" id="news-bottom-container">
-                            <a href="./news-article.html" class="tile tile--news">
+                            <a href="./news-article.html" class="tile tile--news js-news-link">
                                 <img src="./img/news/doc.jpg" alt="bayer">
                                 <p class="tile__description line-1">
                                     Progress made on cancer
                                 </p>
                             </a>
-                            <a href="./companies-pfizer.html" class="tile tile--news">
+                            <a href="./companies-pfizer.html" class="tile tile--news js-news-link">
                                 <img src="./img/news/pfizer.jpg" alt="bayer">
                                 <p class="tile__description line-1">
                                     Pfizer statement on Jury’s
@@ -321,6 +321,28 @@
 
     <script>
         var scr={scripts:[{src:"js/libs.min.js",async:!1},{src:"js/common.js",async:!1}]};!function(t,n,c){"use strict";var r=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var c=0;c<t.length;c++){var r=n.createElement("script"),s=t[c];r.src=s.src,r.async=s.async,n.body.appendChild(r)}return!0};t.addEventListener?t.addEventListener("load",function(){r(c.scripts)},!1):t.attachEvent?t.attachEvent("onload",function(){r(c.scripts)}):t.onload=function(){r(c.scripts)}}(window,document,scr);
+    </script>
+
+    <script>
+        // Render the data from the localStorage during the initial load
+        var newsID = localStorage.getItem('activeNews');
+        
+        if (newsID) {
+            var newsObject = JSON.parse(localStorage.getItem('newsObject')).filter(obj => {return obj.id === newsID})[0];
+            //find the sections to populate
+            var pic = document.querySelector('#news .news__banner');
+            var title = document.querySelector('#news .news__title');
+            var text = document.querySelector('#news .news__text');
+            var like = document.querySelector('#news .js-like');
+            
+            console.log(newsObject);
+            //populate the sections with actual data
+            if (newsObject.pic) {pic.src = newsObject.pic;}
+            if (newsObject.title) {title.innerHTML = newsObject.title;}
+            if (newsObject.long_desc) {text.innerHTML = newsObject.long_desc;} else {text.innerHTML = '';}
+            if (newsObject.is_favorite && newsObject.is_favorite == 'YES') {like.classList.add("like--active");} else {like.classList.remove("like--active");}
+        }
+        console.log('data rendered');
     </script>
 
 

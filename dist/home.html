@@ -63,7 +63,7 @@
 
 </head>
 
-<body class="home-page">
+<body class="home-page" id="home">
     <!--[Structure] Header START -->
     <header>
         <aside class="navigation__sidebar">
@@ -148,7 +148,7 @@
                         </a>
                     </li>
                     <li class="navigation__list-item">
-                        <a href="./logout.html" class="navigation__link">
+                        <a href="#" class="navigation__link js-logout">
                             <svg width="16" height="16" class="navigation__icon visibility-hidden-sm-up" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15.8,6.9C15.8,6.9,15.8,6.9,15.8,6.9l-3.5-3.5c-0.1-0.1-0.3-0.1-0.4,0c-0.1,0.1-0.1,0.3,0,0.4l2.9,2.9h-4.5V0.5
                                     c0-0.2-0.1-0.3-0.3-0.3H0.4c0,0,0,0,0,0c0,0,0,0,0,0c0,0-0.1,0-0.1,0c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0-0.1,0.1
@@ -173,26 +173,26 @@
     <!--[Structure] Header END -->
 
     <!--[Structure] Main START -->
-    <main class="main-content main-content--home">
+    <main class="main-content main-content--home" id="home-main">
         <section class="section--top-news">
             <h2 class="section__title">
                 Top news
             </h2>
 
-            <div class="section__content">
-                <a href="./news-article.html" class="tile tile--news">
+            <div class="section__content" id="news-container-main">
+                <a href="./news-article.html" class="tile tile--news js-news-link">
                     <img src="./img/news/bayer.jpg" alt="bayer">
                     <p class="tile__description line-1">
                         Bayer statement on Jury’s
                     </p>
                 </a>
-                <a href="./news-article.html" class="tile tile--news">
+                <a href="./news-article.html" class="tile tile--news js-news-link">
                     <img src="./img/news/doc.jpg" alt="bayer">
                     <p class="tile__description line-1">
                         Progress made on cancer
                     </p>
                 </a>
-                <a href="./companies-pfizer.html" class="tile tile--news">
+                <a href="./companies-pfizer.html" class="tile tile--news js-news-link">
                     <img src="./img/news/pfizer.jpg" alt="bayer">
                     <p class="tile__description line-1">
                             Title here with ellipsis if it Lorem ipsum dolor sit.
@@ -206,8 +206,8 @@
                 Favorites
             </h2>
 
-            <div class="section__content">
-                <a href="./news-article.html" class="tile tile--small">
+            <div class="section__content" id="fav-container-main">
+                <!-- <a href="./news-article.html" class="tile tile--small">
                     <img src="./img/news/bayer.jpg" alt="bayer">
                     <p class="tile__description line-1">
                         Pfizer
@@ -236,67 +236,7 @@
                     <p class="tile__description line-1">
                         Chantix
                     </p>
-                </a>
-                <a href="./news-article.html" class="tile tile--small">
-                    <img src="./img/news/color-1.svg" alt="bayer">
-                    <p class="tile__description line-1">
-                        Pfizer
-                    </p>
-                </a>
-                <a href="./news-article.html" class="tile tile--small">
-                    <img src="./img/news/color-2.svg" alt="bayer">
-                    <p class="tile__description line-1">
-                        Pills
-                    </p>
-                </a>
-                <a href="./news-article.html" class="tile tile--small">
-                    <img src="./img/news/color-3.svg" alt="bayer">
-                    <p class="tile__description line-1">
-                        Merck
-                    </p>
-                </a>
-                <a href="./news-article.html" class="tile tile--small">
-                    <img src="./img/news/color-4.svg" alt="bayer">
-                    <p class="tile__description line-1">
-                        Drops
-                    </p>
-                </a>
-                <a href="./news-article.html" class="tile tile--small">
-                    <img src="./img/news/color-5.svg" alt="bayer">
-                    <p class="tile__description line-1">
-                        Chantix
-                    </p>
-                </a>
-                <a href="./news-article.html" class="tile tile--small">
-                    <img src="./img/news/bayer.jpg" alt="bayer">
-                    <p class="tile__description line-1">
-                        Pfizer
-                    </p>
-                </a>
-                <a href="./news-article.html" class="tile tile--small">
-                    <img src="./img/news/pills.jpg" alt="bayer">
-                    <p class="tile__description line-1">
-                        Pills
-                    </p>
-                </a>
-                <a href="./news-article.html" class="tile tile--small">
-                    <img src="./img/news/220-2200280_canada-merck-connect-logo-merck-inventing-for-life.jpg" alt="bayer">
-                    <p class="tile__description line-1">
-                        Merck
-                    </p>
-                </a>
-                <a href="./news-article.html" class="tile tile--small">
-                    <img src="./img/news/Rectangle 2.4.jpg" alt="bayer">
-                    <p class="tile__description line-1">
-                        Drops
-                    </p>
-                </a>
-                <a href="./news-article.html" class="tile tile--small">
-                    <img src="./img/news/chantix.jpg" alt="bayer">
-                    <p class="tile__description line-1">
-                        Chantix
-                    </p>
-                </a>
+                </a> -->
             </div>
 
         </section>
@@ -450,13 +390,25 @@
 
     <!--[Structure] Footer START -->
     <footer class="footer">
-
     </footer>
     <!--[Structure] Footer END -->
 
 
     <!-- Optimized loading JS Start -->
+    <script>
+        // check if token is missing - redirect to the login page
+        function getCookie(name) {
+            var matches = document.cookie.match(new RegExp(
+            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+            ));
+            return matches ? decodeURIComponent(matches[1]) : undefined;
+        }
 
+        // redirection simulation in case if not logged in
+        if (!getCookie('access_token')) {
+            location.href = '/login.html';
+        }
+    </script>
     <script>
         var scr={scripts:[{src:"js/libs.min.js",async:!1},{src:"js/common.js",async:!1}]};!function(t,n,c){"use strict";var r=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var c=0;c<t.length;c++){var r=n.createElement("script"),s=t[c];r.src=s.src,r.async=s.async,n.body.appendChild(r)}return!0};t.addEventListener?t.addEventListener("load",function(){r(c.scripts)},!1):t.attachEvent?t.attachEvent("onload",function(){r(c.scripts)}):t.onload=function(){r(c.scripts)}}(window,document,scr);
     </script>
