@@ -184,29 +184,29 @@
                     <div class="personal-info">
                         <label class="input__wrapper">
                             <input type="text" name="name" placeholder="Name" class="input" required 
-                                    value="Dr. Joe Doe">
+                                    value="">
                             <span class="input__info fade">Name</span>
                             <span class="input__error fade fade-out">The password is not correct</span>
                         </label>
 
                         <label class="input__wrapper">
                             <input type="text" name="primary-address" placeholder="Primary Address" class="input" required
-                                    value="691 Cherrydale DR, Lafayette Hill PA 19444232">
-                            <span class="input__info fade">Primary Address</span>
+                                    value="">
+                            <span class="input__info fade fade-out">Primary Address</span>
                             <span class="input__error fade fade-out">Primary Address is required</span>
                         </label>
 
                         <label class="input__wrapper">
                             <input type="text" name="phone-address" placeholder="Phone" class="input" required
-                                    value="267-305-8998">
+                                    value="">
                             <span class="input__info fade fade-out">Phone</span>
                             <span class="input__error fade fade-out">Phone Number is required</span>
                         </label>
             
                         <label class="input__wrapper">
                             <input type="text" name="primary-taxonomy" placeholder="Primary taxonomy" class="input" required
-                                    value="Internal Medicine Gastroenterology">
-                            <span class="input__info fade">Primary taxonomy</span>
+                                    value="">
+                            <span class="input__info fade fade-out">Primary taxonomy</span>
                             <span class="input__error fade fade-out">Phone Number is required</span>
                         </label>
                         
@@ -231,7 +231,7 @@
                 <div class="profile-email">
                     <div class="profile-email__left">
                         <label class="input__wrapper">
-                            <input type="text" name="primary-taxonomy" placeholder="Email" class="input" required
+                            <input type="text" name="account-email" placeholder="Email" class="input" required
                                     value="joe.doe@medicalcompany.com" disabled>
                             <span class="input__info fade">Email</span>
                             <span class="input__error fade fade-out">Phone Number is required</span>
@@ -303,27 +303,27 @@
                 <div class="content">
                     <form action="#">  
                         <label class="input__wrapper">
-                            <input type="text" name="email-address" placeholder="Email" class="input" required
+                            <input type="text" name="email-address" autocomplete="email" placeholder="Email" class="input" required
                                     value="joe.doe@medicalcompany.com">
                             <span class="input__info fade">Email</span>
                             <span class="input__error fade fade-out">Email is required</span>
                         </label>
 
                         <label class="input__wrapper">
-                            <input type="password" name="password" placeholder="Password" class="input" required
+                            <input type="password" name="password" autocomplete="current-password" placeholder="Password" class="input" required
                                     value="12345">
                             <span class="input__info fade">password</span>
                             <span class="input__error fade fade-out">Password is required</span>
                         </label>
 
                         <label class="input__wrapper">
-                            <input type="password" name="password" placeholder="New password" class="input" required>
+                            <input type="password" name="password" autocomplete="new-password" placeholder="New password" class="input" required>
                             <span class="input__info fade">New password</span>
                             <span class="input__error fade fade-out">New Password is required</span>
                         </label> 
 
                         <label class="input__wrapper">
-                            <input type="password" name="password" placeholder="Confirm new password" class="input" required>
+                            <input type="password" name="password" autocomplete="new-password" placeholder="Confirm new password" class="input" required>
                             <span class="input__info fade">Confirm new password</span>
                             <span class="input__error fade fade-out">Please confirm new password</span>
                         </label> 
@@ -356,6 +356,52 @@
         if (!getCookie('access_token')) {
             location.href = '/login.html';
         }
+
+        // Render the data from the localStorage during the initial load
+        var profileData = JSON.parse(localStorage.getItem('profileData'));
+
+        if (profileData) {
+            //find the sections to populate
+            var nameField = document.querySelector('#profile-form input[name="name"]');
+            var address = document.querySelector('#profile-form input[name="primary-address"]');
+            var phone = document.querySelector('#profile-form input[name="phone-address"]');
+            var taxonomy = document.querySelector('#profile-form input[name="primary-taxonomy"]');
+            var email = document.querySelector('#profile-form input[name="account-email"]');
+            
+            //populate the sections with actual data
+            if (profileData.name) {
+                nameField.value = profileData.name;
+                nameField.nextElementSibling.classList.remove("fade-out");
+            } else if (profileData.first_name && profileData.last_name) {
+                nameField.value = profileData.last_name + " " + profileData.first_name
+                nameField.nextElementSibling.classList.remove("fade-out");
+            }
+            
+            // set up the address
+            if (profileData.address) {
+                address.value = profileData.address + ', ' + profileData.city + ' ' + profileData.postal_code;
+                address.nextElementSibling.classList.remove("fade-out");
+            }
+
+            // set up the phone
+            if (profileData.phone) {
+                phone.value = profileData.phone;
+                phone.nextElementSibling.classList.remove("fade-out");
+            }
+            
+            // set up the taxonomy
+            if (profileData.taxonomies) {
+                taxonomy.value = profileData.taxonomies;
+                taxonomy.nextElementSibling.classList.remove("fade-out");
+            }
+
+            // set up the email
+            if (profileData.email) {
+                email.value = profileData.email;
+                email.nextElementSibling.classList.remove("fade-out");
+            }
+        }
+        console.log('data rendered');
     </script>
     <script>
         var scr={scripts:[{src:"js/libs.min.js",async:!1},{src:"js/common.js",async:!1}]};!function(t,n,c){"use strict";var r=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var c=0;c<t.length;c++){var r=n.createElement("script"),s=t[c];r.src=s.src,r.async=s.async,n.body.appendChild(r)}return!0};t.addEventListener?t.addEventListener("load",function(){r(c.scripts)},!1):t.attachEvent?t.attachEvent("onload",function(){r(c.scripts)}):t.onload=function(){r(c.scripts)}}(window,document,scr);

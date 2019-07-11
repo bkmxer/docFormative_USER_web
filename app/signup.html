@@ -63,7 +63,7 @@
 
 </head>
 
-<body class="login-page">
+<body class="login-page" id="signup">
     <!--[Structure] Header START -->
     <header>
 
@@ -77,7 +77,7 @@
             <p class="tile__sub-title">Register doctor</p>
             <form action="#" class="signup-form" id="signup-form-step-1">
                 <label class="input__wrapper">
-                    <input type="text" name="username" placeholder="NPI number" class="input" required>
+                    <input type="text" name="npi-number" placeholder="NPI number" class="input" required>
                     <span class="input__info fade fade-out">NPI number</span>
                     <span class="input__error fade fade-out">NPI number is required</span>
                 </label>
@@ -101,7 +101,6 @@
     <script>
         var scr={scripts:[{src:"js/libs.min.js",async:!1},{src:"js/common.js",async:!1}]};!function(t,n,c){"use strict";var r=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var c=0;c<t.length;c++){var r=n.createElement("script"),s=t[c];r.src=s.src,r.async=s.async,n.body.appendChild(r)}return!0};t.addEventListener?t.addEventListener("load",function(){r(c.scripts)},!1):t.attachEvent?t.attachEvent("onload",function(){r(c.scripts)}):t.onload=function(){r(c.scripts)}}(window,document,scr);
     </script>
-
 
     <!-- Optimized loading JS End -->
 
